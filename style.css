@@ -140,7 +140,7 @@ header{
 /* banner 
 --------------------------------------------*/
 #banner{
-    background-image: url('./images/top-ad.jpg');
+    background-image: url('./images/home-banner-bg.jpg');
 }
 #banner .banner-logo{
 	width: max-content;
