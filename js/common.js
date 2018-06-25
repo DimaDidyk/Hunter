@@ -20,11 +20,12 @@ $(document).ready(function(){
 	$(window).scroll();
 
 
-	// $("#date-countdown").countdown("2018/06/26", function(event) {
- //        $(this).html(
- //            event.strftime('<span>%D</span> <span>%H</span> <span>%M</span> <span>%S</span>')
- //        );
- //    });
+	$('.map-item-wrap').click(function(){
+		$('.map-item-wrap').removeClass('active');
+		$(this).addClass('active');
+	});
+
+
 
     // Grab the current date
 	var currentDate = new Date(2018, 05, 26 );

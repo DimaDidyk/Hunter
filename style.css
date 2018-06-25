@@ -9,12 +9,15 @@ h2{
 img{
 	max-width: 100%;
 }
+a:active,
 a:hover{
 	text-decoration: none;
+	text-transform: none;
 }
 a{
 	color: #000;
-	text-decoration: none;
+	text-decoration: none !important;
+	text-transform: none;
 }
 input:active,
 input{
@@ -95,14 +98,10 @@ header{
 	top: 0;
 	transition: all .4s;
 	width: 100%;
-	background-image: -moz-linear-gradient( 90deg, rgba(108,144,252, 0.302) 0%, rgba(46,98,254, 0.302) 0%, rgba(86,211,230, 0.302) 100%);
-	background-image: -webkit-linear-gradient( 90deg, rgba(108,144,252, 0.302) 0%, rgba(46,98,254, 0.302) 0%, rgba(86,211,230, 0.302) 100%);
-	background-image: -ms-linear-gradient( 90deg, rgba(108,144,252, 0.302) 0%, rgba(46,98,254, 0.302) 0%, rgba(86,211,230, 0.302) 100%);
+	background: rgba(22, 40, 96, .3);
 }
 header.scrollTop{
-	background-image: -moz-linear-gradient( 90deg, rgba(108,144,252, 0.8) 0%, rgba(46,98,254, 0.8) 0%, rgba(86,211,230, 0.8) 100%);
-	background-image: -webkit-linear-gradient( 90deg, rgba(108,144,252, 0.8) 0%, rgba(46,98,254, 0.8) 0%, rgba(86,211,230, 0.8) 100%);
-	background-image: -ms-linear-gradient( 90deg, rgba(108,144,252, 0.8) 0%, rgba(46,98,254, 0.8) 0%, rgba(86,211,230, 0.8) 100%);
+	background: rgba(22, 40, 96, .8);
 }
 header .container{
 	justify-content: center;
@@ -116,6 +115,8 @@ header .logo{
     width: max-content;
 }
 header{
+	cursor: default;
+	/*box-shadow: 0px 5px 8px 0px rgba(7, 65, 237, 0.45);*/
 }
 #main-menu{
 	float: right;
@@ -131,6 +132,9 @@ header{
 	transition: all .3s;
 	padding: 8px 16px;
 	margin: 0 4px;
+}
+#main-menu .menu-item a span{
+	color: #fff;
 }
 #main-menu .menu-item.active{
 	background: #3663ea;
@@ -186,10 +190,15 @@ header{
 	padding: 10px 30px;
 	width: max-content;
 	border-radius: 4px;
+	/*opacity: .8;*/
+	transition: all .4s;
 	background-image: -moz-linear-gradient( 90deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
 	box-shadow: 0px 5px 8px 0px rgba(7, 65, 237, 0.45);
+}
+#hunter a.button:active{
+    background-image: linear-gradient( 180deg, #0edfff 0%, #0230ba );
 }
 #hunter a.button img{
 	position:  relative;
@@ -396,12 +405,18 @@ padding-top: 160px;
 	opacity: .6;
 	cursor: default;
 }
+.map-item-container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+}
 #map .map-item{
 	background: rgb(26, 108, 202, .8);
 	transition: all .4s;
 	font-size: 16px;
 	text-align: center;
 	padding: 18px 0;
+	cursor: pointer;
 }
 #map .map-item-wrap span{
 	text-align: center;
@@ -410,10 +425,10 @@ padding-top: 160px;
 	margin-bottom: 20px;
 	font-size: 12px;
 }
-#map .map-item-wrap:hover{
+#map .map-item-wrap.active{
 	opacity: 1;
 }
-#map .map-item-wrap:hover .map-item{
+#map .map-item-wrap.active .map-item{
 	background: #59cffc;
 	color: #fff;
 	opacity: 1;
@@ -433,12 +448,9 @@ padding-top: 160px;
 	margin-top: 30px;
 }
 
-
-
 /* timer
 --------------------------------------------*/
 #timer{
-
 }
 #timer h3{
 	font-size: 26px;
@@ -475,47 +487,36 @@ padding-top: 160px;
 	position:  relative;
 }
 .pre-info .year{
-	
+	border-right: 2px solid #cbd2dd;
 }
 .pre-info .time:before{
 	content: '';
+	background: url('./images/point-grey.png');
 	width: 10px;
 	height: 10px;
 	display:  block;
-	background: #3663ea;
 	border-radius: 50%;
 	position:  absolute;
-	margin-left:  -22px;
+	margin-left: -20px;
 	margin-top: 5px;
 	padding: 6px;
 	box-sizing: border-box;
 }
-.pre-info .time:after{
-	content: '';
-	width: 4px;
-	height: 31px;
-	position:  absolute;
-	display:  block;
-	background: #3333;
-	left: -8px;
-	top: 20px;
-}
-.pre-info .time{
-	
+.pre-info .time.active:before{
+	background: url('./images/point-blue.png');
 }
 .pre-info .value{
 	text-align: right;
 }
-.pre-info{
-	
-}
-
 
 
 /* team
 --------------------------------------------*/
 #team{
 	background: #f0f5fd;
+}
+#team .section-header{
+	margin-bottom: 60px;
 }
 #team .section-header h3{
 	background: #f0f5fd;
@@ -533,7 +534,11 @@ padding-top: 160px;
 	position:  relative;
 	padding: 60px 20px 20px;
 	background-color: rgb(255, 255, 255);
+	transition: all .4s;
 	box-shadow: 0px 16px 29px 0px rgba(15, 95, 188, 0.27);
+}
+#team .team-item:hover{
+	box-shadow: 0px 16px 29px 0px rgba(15, 95, 188, 0.47);
 }
 #team .team-item img{
 	position:  absolute;
@@ -643,7 +648,7 @@ padding-top: 160px;
 	width: 100%;
 	border: none;
 	border: none;
-	color: rgb(153, 153, 153);
+	color: #333;
 	border-bottom: 1px solid rgba(153, 153, 153, .5);
 	transition: all .3s;
 	font-size: 24px;
@@ -651,18 +656,25 @@ padding-top: 160px;
 }
 #about input[type="text"]::placeholder{
 	text-align: center;
+	color: #999;
 }
 #about input[type="text"]:hover,
-#about input[type="text"]:active{
-	border-bottom: 1px solid rgba(153, 153, 153, 1);
+#about input[type="text"]:focus{
+	border-bottom: 1px solid #333;
 
 }
-
+#about input[type="text"]:focus::placeholder{
+	text-align: left;
+}
 #about input[type="submit"]{
 	font-size: 24px;
 	width: max-content;
 	margin: 50px auto 0;
 	display:  block;
+	transition: all .4s;
+}
+#about input[type="submit"]:active{
+    background-image: linear-gradient( 180deg, #0edfff 0%, #0230ba );
 }
 
 
@@ -751,6 +763,9 @@ footer .footer-icon.weibo:hover{
 	#technical .right-technical .technical-item{
 		padding: 0;
 		background: none !important;
+	}
+	.map-item-container{
+		grid-gap: 10px;
 	}
 }
 
