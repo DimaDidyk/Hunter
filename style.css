@@ -44,8 +44,12 @@ section{
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
+.container{
+	max-width: 100%;
+}
 .section-header{
-	max-width: 840px;
+	width: 840px;
+	max-width:  100%;
 	display: block;
 	margin: 0 auto;
 	color: rgb(51, 51, 51);
@@ -518,7 +522,7 @@ padding-top: 160px;
 }
 #team .row{
 	display: flex;
-	
+
 }
 #team .col-sm-4{
 	display: flex;
@@ -617,6 +621,7 @@ padding-top: 160px;
 	display: block;
 	margin: 0 auto;
 	font-size: 16px;
+	padding: 0 15px;
 }
 #about h3 span{
 	font-size: 26px;
@@ -717,4 +722,123 @@ footer .footer-icon.weibo{
 }
 footer .footer-icon.weibo:hover{
 	background-image: url('./images/share-weibo-hover.png');
+}
+
+
+
+@media only screen and (max-width: 1600px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+	/* technical */
+	#technical img.phone-img{
+		bottom: -52px;
+		width: 600px;
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+	#main-menu{
+		display: none;
+	}
+	
+	/* technical */
+	#technical .technical-item,
+	#technical .right-technical .technical-item{
+		padding: 0;
+		background: none !important;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+	.section-header hr{
+		display: none;
+	}
+	.section-header h2{
+		font-size: 28px;
+		margin-top: 10px;
+	}
+	h2{
+		font-size: 32px;
+	}
+	
+	#banner .banner-logo{
+	    max-width: 94%;
+	}
+	#banner p{
+		font-size: 32px;
+	}
+	/* hunter */
+	#hunter h2{
+
+	}
+	#hunter p{
+		font-size: 16px;
+	}
+	
+
+
+	/* timer */
+	#timer h3{
+		text-align: center;
+		margin: 20px 0;
+	}
+	#timer .clock{
+		display: block;
+    	margin: 0 auto !important;
+	}
+	#timer span{
+		clear: both;
+		opacity: 0;
+		width: 0;
+	}
+	
+	/* map */
+	#map{
+		padding-top: 40px;
+	}
+	#map .map-img{
+		max-width: 100%;
+		padding-top: 0;
+	}
+
+	/* technical */
+	#technical h3:after, #technical h3:before{
+		content: none;
+	}
+	#technical .right-technical .technical-item{
+		float: left;
+	}
+	#technical .right-technical .technical-item,
+	#technical .technical-item{
+		max-width: 100%;
+		text-align: left;
+		height: max-content;
+		min-height: initial;
+		margin-bottom: 30px;
+	}
+	#technical img.phone-img{
+		display: none;
+	}
+	
+	/* team */
+	#team .row,
+	#team .col-sm-4{
+		display: block;
+	}
+
+	/* employment */
+	#employment img.employment-img{
+		margin-bottom: 0;
+	}
+
+	/* footer */
+	footer .soc-icons .footer-icon{
+		margin: 0 10px;
+	}
 }
