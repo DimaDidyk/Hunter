@@ -2,6 +2,7 @@ body{
 	margin: 0;
 	max-width:  100%;
 	overflow-x:  hidden;
+	cursor: default;
 }
 h2{
 	font-size: 40px;
@@ -65,6 +66,7 @@ section{
 	display: block;
 	margin: 0 auto;
 	color: rgb(51, 51, 51);
+	cursor: default;
 }
 .section-header h3{
 	width: -webkit-max-content;
@@ -655,6 +657,7 @@ padding-top: 160px;
 	color: #fff;
 	text-align:  center;
 	margin-top: 30px;
+	cursor: default;
 }
 #investment .investment-intem:hover{
 	background-color: rgb(58, 105, 249);
@@ -708,6 +711,7 @@ padding-top: 160px;
 	margin: 0 auto;
 	font-size: 16px;
 	padding: 0 15px;
+	cursor: default;
 }
 #about h3 span{
 	font-size: 26px;
@@ -814,6 +818,7 @@ footer .soc-icons .footer-icon{
 	margin: 0 30px;
 }
 footer .copyright{
+	cursor: default;
 	text-align: center;
 	font-size: 16px;
 	color: rgb(153, 153, 153);
