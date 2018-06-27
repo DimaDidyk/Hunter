@@ -634,6 +634,127 @@ padding-top: 160px;
 }
 
 
+/* media information
+--------------------------------------------*/
+#media-information{
+
+}
+#media-information .information-box{
+	box-shadow: 0px 4px 28px 0px rgba(9, 46, 88, 0.17);
+	margin-left: 60px;
+	position:  relative;
+}
+/* side */
+#media-information .side-information{
+	background: #127afb;
+	box-shadow: 3.654px -1.627px 28px 0px rgba(9, 46, 88, 0.4);
+	color: #fff;
+	position:  absolute;
+	width:  400px;
+	margin-left:  -60px;
+	top: 80px;
+	bottom: 80px;
+	z-index: 2;
+}
+#media-information .side-information h2{
+	font-size: 44px;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	padding-left: 30px;
+}
+#media-information .side-information .information-item{
+	margin-bottom: 20px;
+	padding: 8px 30px 8px 50px;
+	margin-left: -20px;
+	color: rgb(230, 230, 230);
+	cursor: pointer;
+}
+#media-information .side-information .information-item.active{
+	color: #fff;
+	background-color: rgb(80, 161, 253);
+	box-shadow: 0 15.373px 28px 0px rgba(1, 65, 138, 0.5);
+	position: relative;
+}
+#media-information .side-information .information-item.active:before{
+	content: '';
+	position: absolute;
+}
+#media-information .side-information .information-item p{
+	text-align: justify;
+	line-height: 1.45;
+	font-size: 20px;
+}
+#media-information .side-information .information-item span{
+	display: block;
+	text-align:  right;
+	margin-right: 0;
+}
+/* content */
+#media-information .content-information-box{
+	padding-left: 420px;
+	padding-top: 80px;
+	padding-bottom: 76px;
+	padding-right: 80px;
+}
+#media-information .content-information-box .content-text{
+	max-height: 800px;
+	overflow-y:  scroll;
+	padding-right: 60px;
+	display: none;
+	position: relative;
+}
+#media-information .shadow:before{
+	box-shadow: inset -8px -175px 146px -2px rgba(255,255,255,0.7);
+	position: absolute;
+	content: '';
+	width: 100%;
+	bottom: 0;
+	height: 185px;
+	right:  0;
+	z-index: 1;
+}
+.content-information-box{
+	position: relative;
+}
+#media-information .content-information-box .content-text.active{
+	display: block;
+}
+/* width */
+.content-information-box .content-text::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 2px;
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+/* Track */
+.content-information-box .content-text::-webkit-scrollbar-track {
+    background-color: #ccd2e3;
+    transition: all .4s;
+}
+/* Handle */
+.content-information-box .content-text::-webkit-scrollbar-thumb {
+    background: #127afb;
+}
+/* Handle on hover */
+.content-information-box .content-text::-webkit-scrollbar-thumb:hover {
+    background: #2a5efa; 
+}
+
+#media-information .content-information-box .content-text h3{
+	color: rgb(77, 77, 77);
+	font-size: 24px;
+	line-height: 1.2;
+	margin-top:  0;
+}
+#media-information .content-information-box .content-text p{
+	line-height: 1.875;
+	color: rgb(153, 153, 153);
+	margin-bottom: 24px;
+}
+
+
+
 /* investment
 --------------------------------------------*/
 #investment{
@@ -898,6 +1019,26 @@ footer .footer-icon.weibo:hover{
 	.map-item-container{
 		grid-gap: 10px;
 	}
+
+	/* media-information */
+	#media-information .side-information h2{
+		padding-top: 30px;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	#media-information .side-information{
+		position: static;
+		width: 100%;
+	}
+	#media-information .side-information{
+		margin-left: -20px;
+	}
+	#media-information .information-box{
+		margin-left: 40px;
+	}
+	#media-information .content-information-box{
+		padding: 15px;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -974,6 +1115,27 @@ footer .footer-icon.weibo:hover{
 	#team .row,
 	#team .col-sm-4{
 		display: block;
+	}
+
+	
+	/* media-information */
+	#media-information .side-information h2{
+		font-size: 32px;
+	}
+	#media-information .side-information .information-item p{
+		font-size: 18px;
+	}
+	#media-information .side-information{
+		margin-left: -20px;
+	}
+	#media-information .information-box{
+		margin-left: 15px;
+	}
+	#media-information .content-information-box .content-text{
+		padding-right: 15px;
+	}
+	#media-information .content-information-box .content-text h3{
+		font-size: 20px;
 	}
 
 	/* employment */

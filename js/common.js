@@ -37,24 +37,19 @@ $(document).ready(function(){
         );
     });
 
- //    // Grab the current date
-	// var currentDate = new Date(2018, 05, 29 );
-	// console.log( currentDate );
+
+    $('.side-information .information-item').click(function(){
+		$('.side-information .information-item').removeClass('active');
+		$(this).addClass('active');
+		let indexItem = $(this).index();
+		$('.content-information-box .content-text').removeClass('active');
+		$('.content-information-box .content-text:nth-child(' + indexItem + ')').addClass('active');
+		$('html, body').animate({
+	        scrollTop: $("#content-information-box").offset().top -80
+	    }, 500);
+	});
 
 
-	// // Instantiate a coutdown FlipClock
-	// clock1 = $('#clock-ch').FlipClock(currentDate, {
-	// 	clockFace: 'DailyCounter',
-	// 	countdown: true,
-	// 	showSeconds: true
-	// });
-
-	// // Instantiate a coutdown FlipClock
-	// clock2 = $('#clock-en').FlipClock(currentDate, {
-	// 	clockFace: 'DailyCounter',
-	// 	countdown: true,
-	// 	showSeconds: true
-	// });
 
 	$('.company img').mouseover(function(){
 		let src = $(this).attr('src');
