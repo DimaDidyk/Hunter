@@ -39,22 +39,22 @@ input[type="submit"]{
 
 }
 section{
-	min-height: 100vh;
-	/* height: 100vh; */
+	min-height: max-content;
+	height: 100vh;
 	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	position:  relative;
 	background-position: center;
 	background-size: cover;
-	padding-top: 50px;
+	padding-top: 115px;
 	padding-bottom: 50px;
 }
 .container{
@@ -117,6 +117,7 @@ header{
 }
 header.scrollTop{
 	background: rgba(22, 40, 96, .8);
+	box-shadow: 0px 5px 8px 0px rgba(7, 65, 237, 0.45);
 }
 header .container{
 	-webkit-box-pack: center;
@@ -357,8 +358,6 @@ header{
 /* profesional
 --------------------------------------------*/
 #profesional{
-	
-padding-top: 160px;
 }
 .profesional-img{
 }
@@ -407,7 +406,6 @@ padding-top: 160px;
 /* employment
 --------------------------------------------*/
 #employment{
-
 }
 #employment img.employment-img{
 	display: block;
@@ -537,11 +535,10 @@ padding-top: 160px;
 }
 .pre-info{
 	border-radius: 4px;
+	box-shadow: inset 0px -70px 41px 0px rgba(255,255,255,0.7);
 	overflow:  hidden;
 	background-image: -webkit-linear-gradient( 90deg, rgb(245,247,249) 0%, rgb(235,237,240) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(245,247,249) 0%, rgb(235,237,240) 100%);
-	-webkit-box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.004),inset 0px 1px 1px 0px rgba(2, 34, 67, 0.27);
-	        box-shadow: inset 0px -1px 0px 0px rgba(255, 255, 255, 0.004),inset 0px 1px 1px 0px rgba(2, 34, 67, 0.27);
 }
 .pre-info .pre-info-item{
 	
@@ -665,15 +662,21 @@ padding-top: 160px;
 #media-information .side-information .information-item{
 	margin-bottom: 20px;
 	padding: 8px 30px 8px 50px;
-	margin-left: -20px;
+	/*margin-left: -20px;*/
 	color: rgb(230, 230, 230);
 	cursor: pointer;
+	transition: all .4s;
+}
+#media-information .side-information .information-item:hover{
+	box-shadow: 0 15.373px 28px 0px rgba(1, 65, 138, 0.5);
+    background-color: rgba(80, 161, 253, .4);
 }
 #media-information .side-information .information-item.active{
 	color: #fff;
 	background-color: rgb(80, 161, 253);
 	box-shadow: 0 15.373px 28px 0px rgba(1, 65, 138, 0.5);
 	position: relative;
+	margin-left: -20px; 
 }
 #media-information .side-information .information-item.active:before{
 	content: '';
