@@ -36,9 +36,7 @@ input[type="submit"]{
     background-image: -ms-linear-gradient( 90deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
     -webkit-box-shadow: 0px 5px 8px 0px rgba(7, 65, 237, 0.45);
             box-shadow: 0px 5px 8px 0px rgba(7, 65, 237, 0.45);
-
 }
-
 section{
 	min-height: max-content;
 	height: 100vh;
@@ -58,6 +56,7 @@ section{
 	padding-top: 115px;
 	padding-bottom: 50px;
 }
+
 .container{
 	max-width: 100%;
 }
@@ -131,7 +130,7 @@ header .container{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-	min-height: 80px;
+	min-height: 60px;
 	position: relative;
 }
 header .logo{
@@ -189,6 +188,10 @@ header{
 	left:  0;
 	right:  0;
 	max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    max-height: 50vh;
+    object-fit: contain;
 }
 
 #banner h2{
@@ -240,16 +243,15 @@ header{
 	-webkit-transition: all .4s;
 	-o-transition: all .4s;
 	transition: all .4s;
+	position: relative;
 	background-image: -webkit-linear-gradient( 90deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
 	-webkit-box-shadow: 0px 5px 8px 0px rgba(7, 65, 237, 0.45);
 	        box-shadow: 0px 5px 8px 0px rgba(7, 65, 237, 0.45);
 }
 #hunter a.button:active{
-    background-image: -webkit-gradient( linear, left top, left bottom, from(#0edfff), to(#0230ba) );
-    background-image: -webkit-linear-gradient( top, #0edfff 0%, #0230ba );
-    background-image: -o-linear-gradient( top, #0edfff 0%, #0230ba );
-    background-image: linear-gradient( 180deg, #0edfff 0%, #0230ba );
+	bottom: -2px;
+    box-shadow: none;
 }
 #hunter a.button img{
 	position:  relative;
@@ -320,40 +322,39 @@ header{
 #technical .technical-item.price{
 	background-image: url('./images/Technical-icon_one.png');
 }
-#technical .technical-item.price:hover{
+/*#technical .technical-item.price:hover{
 	background-image: url('./images/Technical-icon_one-hover.png');
-}
-
+}*/
 #technical .technical-item.dpos{
 	background-image: url('./images/Technical-icon_two.png');
 }
-#technical .technical-item.dpos:hover{
+/*#technical .technical-item.dpos:hover{
 	background-image: url('./images/Technical-icon_two-hover.png');
-}
+}*/
 #technical .technical-item.wallet{
 	background-image: url('./images/Technical-icon_three.png');
 }
-#technical .technical-item.wallet:hover{
+/*#technical .technical-item.wallet:hover{
 	background-image: url('./images/Technical-icon_three-hover.png');
-}
+}*/
 #technical .technical-item.persone{
 	background-image: url('./images/Technical-icon_four.png');
 }
-#technical .technical-item.persone:hover{
+/*#technical .technical-item.persone:hover{
 	background-image: url('./images/Technical-icon_four-hover.png');
-}
+}*/
 #technical .technical-item.dapp{
 	background-image: url('./images/Technical-icon_five.png');
 }
-#technical .technical-item.dapp:hover{
+/*#technical .technical-item.dapp:hover{
 	background-image: url('./images/Technical-icon_five-hover.png');
-}
+}*/
 #technical .technical-item.browser{
 	background-image: url('./images/Technical-icon_six.png');
 }
-#technical .technical-item.browser:hover{
+/*#technical .technical-item.browser:hover{
 	background-image: url('./images/Technical-icon_six-hover.png');
-}
+}*/
 #technical img.phone-img{
 	position:  absolute;
 	left:  0;
@@ -565,6 +566,7 @@ header{
 	background-image: -webkit-linear-gradient( 90deg, rgb(245,247,249) 0%, rgb(235,237,240) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(245,247,249) 0%, rgb(235,237,240) 100%);
 }
+
 .pre-info .pre-info-item:nth-child(2){
 	opacity: .8;
 }
@@ -636,12 +638,12 @@ header{
 	-webkit-transition: all .4s;
 	-o-transition: all .4s;
 	transition: all .4s;
-	-webkit-box-shadow: 0px 16px 29px 0px rgba(15, 95, 188, 0.27);
-	        box-shadow: 0px 16px 29px 0px rgba(15, 95, 188, 0.27);
+	-webkit-box-shadow: 0px 6px 9px 0px rgba(15, 95, 188, 0.3);
+	        box-shadow: 0px 6px 9px 0px rgba(15, 95, 188, 0.3);
 }
 #team .team-item:hover{
-	-webkit-box-shadow: 0px 16px 29px 0px rgba(15, 95, 188, 0.47);
-	        box-shadow: 0px 16px 29px 0px rgba(15, 95, 188, 0.47);
+	-webkit-box-shadow: 0px 16px 29px 0px rgba(15, 95, 188, 0.3);
+	        box-shadow: 0px 16px 29px 0px rgba(15, 95, 188, 0.3);
 }
 #team .team-item img{
 	position:  absolute;
@@ -695,16 +697,17 @@ header{
 	cursor: pointer;
 	transition: all .4s;
 }
+#media-information .side-information .information-item.active,
 #media-information .side-information .information-item:hover{
 	box-shadow: 0 15.373px 28px 0px rgba(1, 65, 138, 0.5);
     background-color: rgba(80, 161, 253, .4);
 }
 #media-information .side-information .information-item.active{
-	color: #fff;
+/*	color: #fff;
 	background-color: rgb(80, 161, 253);
 	box-shadow: 0 15.373px 28px 0px rgba(1, 65, 138, 0.5);
 	position: relative;
-	margin-left: -20px; 
+	margin-left: -20px; */
 }
 #media-information .side-information .information-item.active:before{
 	content: '';
@@ -753,8 +756,7 @@ header{
 }
 /* width */
 .content-information-box .content-text::-webkit-scrollbar {
-    width: 5px;
-    border-radius: 2px;
+    width: 8px;
     display: block;
     position: relative;
     z-index: 10;
@@ -763,14 +765,16 @@ header{
 .content-information-box .content-text::-webkit-scrollbar-track {
     background-color: #ccd2e3;
     transition: all .4s;
+    border-radius: 20px;
 }
 /* Handle */
 .content-information-box .content-text::-webkit-scrollbar-thumb {
     background: #127afb;
+    border-radius: 20px;
 }
 /* Handle on hover */
 .content-information-box .content-text::-webkit-scrollbar-thumb:hover {
-    background: #2a5efa; 
+    /*background: #2a5efa; */
 }
 
 #media-information .content-information-box .content-text h3{
@@ -784,7 +788,16 @@ header{
 	color: rgb(153, 153, 153);
 	margin-bottom: 24px;
 }
-
+#media-information .content-information-box .content-text.active:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-image: -webkit-linear-gradient( 90deg, rgba(255,255,255, 1) 0, rgba(255,255,255, .1) 20%);
+	background-image: -ms-linear-gradient( 90deg, rgba(255,255,255, 1) 0, rgba(255,255,255, .1) 20%);
+}
 
 
 /* investment
@@ -827,6 +840,7 @@ header{
 }
 #investment .investment-intem p{
 	line-height: 1.8;
+	min-height: 110px;
 }
 .company{
 	margin-top: 50px;
@@ -842,10 +856,7 @@ header{
 	transition: all 1s;
 }
 .company img:hover{
-	background-image: -webkit-linear-gradient( 0deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
-	background-image: -ms-linear-gradient( 0deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
-	-webkit-box-shadow: 0px 5px 8px 0px rgba(7, 65, 237, 0.45);
-	        box-shadow: 0px 5px 8px 0px rgba(7, 65, 237, 0.45);
+	box-shadow: 0px 4px 36px 0px rgba(15, 95, 188, 0.7);
 }
 
 /* about
@@ -1058,7 +1069,11 @@ footer .footer-icon.weibo:hover{
 @media only screen and (max-width: 992px) {
 	#banner h2{
 		margin-top: 0;
-		font-size: 42px;
+	    margin-bottom: 20px;
+		font-size: 32px;
+	}
+	#banner p{
+		font-size: 18px;
 	}
 	#main-menu{
 		display: none;
