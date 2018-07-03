@@ -58,7 +58,9 @@ section{
 	padding-top: 115px;
 	padding-bottom: 50px;
 }
-
+.button{
+	cursor: pointer;
+}
 .container{
 	max-width: 100%;
 }
@@ -1047,15 +1049,11 @@ footer .footer-icon.weibo:hover{
 }
 */
 
-
 .flip-clock-wrapper{
-
 }
 .flip-clock-wrapper .flip:nth-child(5n - 1){
 	margin-right: 30px;
 }
-
-
 .hide-images{
 	opacity: 0;
 	position: absolute;
@@ -1063,6 +1061,65 @@ footer .footer-icon.weibo:hover{
 	height: 0;
 	width: 0;
 }
+
+
+
+/* footer
+--------------------------------------------*/
+.popup-container{
+	display: none;
+}
+.popup{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(3, 27, 101, .85);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	cursor: pointer;
+}
+.popup .close-popup{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+.popup-wrap{
+	background: url('./images/popup-bg.png') no-repeat, #fff;
+	max-width: 100%;
+	width: 600px;
+	height: 700px;
+	display: block;
+	margin: auto;
+	border-radius: 5px;
+	text-align: center;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    color: #fff;
+    position: relative;
+    cursor: default;
+}
+.content-popup{
+	padding-top: 150px;
+}
+.popup-wrap h2{
+	font-size: 26px;
+}
+.popup-wrap .content-popup h2{
+	color: rgb(51, 51, 51);
+	line-height: 1.6;
+	font-size: 26px;
+	max-width: 350px;
+	margin: 0 auto;
+}
+.content-popup .qr{
+	padding-top: 70px;
+}
+
 
 @media only screen and (max-width: 1600px) {
 

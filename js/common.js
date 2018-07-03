@@ -107,7 +107,29 @@ $(document).ready(function(){
       mousewheel: true,
     });
 
-  
+
+    var popupStatus = false;
+    // open popup
+    $('#open-map-popup').click(function(){
+        $('#map-popup').show();
+        popupStatus = true;
+        if( popupStatus == true ){
+            // close popup
+            $(document).mouseup(function (e){ 
+                var div = $(".popup-wrap");
+                if (!div.is(e.target) && div.has(e.target).length === 0) {
+                    $('.popup-container').hide();
+                    popupStatus = false;
+                }
+            });
+        }
+    });
+
+    // close popup
+    $('.close-popup').click(function(){
+        $('.popup-container').hide();
+        popupStatus = false;
+    });
 
 });
 
