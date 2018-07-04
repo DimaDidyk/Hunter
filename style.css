@@ -175,6 +175,76 @@ header{
 	opacity: 1;
 	border-bottom: 1px solid #fff;
 }
+#main-menu .language{
+	opacity: 1;
+}
+#main-menu .language span{
+	opacity: .5;
+}
+#main-menu .language .active{
+	opacity: 1;
+}
+
+#sandwich {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+    top: -16px;
+    right: -16px;
+	float: right;
+	display: none;
+	margin: 0;
+	margin-right: 0;
+	margin-left: auto;
+	transform: scale(.3);
+}
+.sw-topper {
+  position: relative;
+  top: 0;
+  width: 100px;
+  height: 10px;
+  background: #fff;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: transform 0.5s, top 0.2s;
+/* transition-delay: 0.2s, 0s; */
+}
+.sw-bottom {
+  position: relative;
+  width: 100px;
+  height: 10px;
+  top: 20px;
+  background: #fff;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: transform 0.5s, top 0.2s;
+  transition-delay: 0.2s, 0s;
+}
+.sw-footer {
+  position: relative;
+  width: 100px;
+  height: 10px;
+  top: 40px;
+  background: #fff;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+}
+#sandwich.active .sw-topper {
+  top: 15px;
+  transform: rotate(140deg);
+}
+#sandwich.active .sw-bottom {
+  top: 5px;
+  transform: rotate(-140deg);
+}
+#sandwich.active .sw-footer {
+  opacity: 0;
+  top: 0;
+  transform: rotate(180deg);
+}
+
 
 
 /* banner 
@@ -1149,6 +1219,38 @@ footer .footer-icon.weibo:hover{
 
 /* Medium devices (desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
+	/* mobile menu */
+	#sandwich{
+		display: block;
+	}
+	header.active{
+	    background-color: rgb(21, 63, 191);
+	}
+	header .container{
+		display: block;
+	}
+	header .logo{
+		margin-top: 12px;
+	}
+	#main-menu{
+		display: none;
+		float: none;
+		position: static;
+		width: 100%;
+	    padding: 10px 0;
+
+	}
+	#main-menu .active .menu-item{
+		border: none;
+	}
+	#main-menu .menu-item{
+		display: block;
+		margin-left: -16px;
+		padding-left: 16px;
+		max-width: max-content;
+	}
+
+
 	#banner h2{
 		margin-top: 0;
 	    margin-bottom: 20px;
@@ -1157,10 +1259,19 @@ footer .footer-icon.weibo:hover{
 	#banner p{
 		font-size: 18px;
 	}
-	#main-menu{
-		display: none;
+
+	/* profesional */
+	.profesional-img img.profesional-center{
+		margin-bottom: 0;
+		margin-left: -8px;
 	}
-	
+	.profesional-img img{
+		margin: 0 auto;
+		display: block;
+		width: 100%;
+	    max-width: max-content;
+	}
+
 	/* technical */
 	#technical .technical-item,
 	#technical .right-technical .technical-item{
@@ -1194,14 +1305,8 @@ footer .footer-icon.weibo:hover{
 
 /* Small devices (tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-	/* profesional */
-	.profesional-img img.profesional-center{
-		margin-bottom: 0;
-		margin-left: -8px;
-	}
-	.profesional-img img{
-		margin: 0 auto;
-	}
+
+	
 	
 	.section-header hr{
 		display: none;
@@ -1239,8 +1344,22 @@ footer .footer-icon.weibo:hover{
 		display: block;
     	margin: 0 auto !important;
 	}
-	
-	
+	.flip-clock-wrapper ul{
+		width: 20px;
+		height: 50px;
+		margin: 2px;
+		padding: 13px;
+	}
+	.flip-clock-wrapper .flip:nth-child(5n - 1){
+		margin-right: 10px;
+	}
+	.flip-clock-wrapper ul li{
+		line-height: 50px;
+	}
+	.flip-clock-wrapper ul li a div div.inn{
+		font-size: 40px;
+	}
+
 	/* map */
 	#map{
 		padding-top: 40px;
@@ -1307,6 +1426,7 @@ footer .footer-icon.weibo:hover{
 	footer .soc-icons .footer-icon{
 		margin: 0 10px;
 	}
+	
 }
 
 @media only screen and (max-width: 650px) {

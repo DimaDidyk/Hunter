@@ -3,7 +3,8 @@ $(document).ready(function(){
 	// mobile header menu
     $("#sandwich, .menu_item").click(function() {
         $("#sandwich").toggleClass("active");
-        $("#mobile-menu").toggle(600);
+        $("header").toggleClass("active");
+        $("#main-menu").toggle(600);
     });
 
     // change color header
@@ -15,10 +16,6 @@ $(document).ready(function(){
 		}
 	});
 	$(window).scroll();
-
-
-	
-
 
 
     // var clock = $('#clock-hrc').FlipClock({
@@ -59,7 +56,7 @@ $(document).ready(function(){
  //        );
  //    });
 
-    $('.side-information .information-item').click(function(){
+    $('.side-information .information-item').hover(function(){
 		$('.side-information .information-item').removeClass('active');
 		$(this).addClass('active');
 		let indexItem = $(this).index();
@@ -109,7 +106,7 @@ $(document).ready(function(){
     //     $('.map-item-wrap').removeClass('active');
     //     $(this).addClass('active');
     // });
-    
+
 
     var popupStatus = false;
     // open popup
