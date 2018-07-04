@@ -887,7 +887,7 @@ header{
     transition: all .4s;
     display: block;
     margin-top: -120px;
-    z-index: 100;
+    z-index: 90;
     right: 88px;
     max-width: 600px;
     background-image: -webkit-linear-gradient( 90deg, rgba(255,255,255, 1) 0, rgba(255,255,255, .4) 50%);
@@ -1302,11 +1302,16 @@ footer .footer-icon.weibo:hover{
 	#media-information .content-information-box{
 		padding: 15px;
 	}
+	footer .soc-icons .footer-icon{
+	    margin: 0 20px;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-
+	section{
+		padding-top: 60px;
+	}
 	
 	
 	.section-header hr{
@@ -1323,6 +1328,9 @@ footer .footer-icon.weibo:hover{
 	#banner .banner-logo{
 	    max-width: 94%;
 	}
+	#banner h2{
+		margin-top: 10px;
+	}
 	#banner p{
 		/*font-size: 18px;*/
 	}
@@ -1334,7 +1342,13 @@ footer .footer-icon.weibo:hover{
 		font-size: 16px;
 	}
 	
-
+	/* investment */
+	#investment .investment-intem{
+		margin-top: 0;
+	}
+	#investment .investment-intem img{
+		margin: 0 auto;
+	}
 
 	/* timer */
 	#timer h3{
@@ -1371,6 +1385,9 @@ footer .footer-icon.weibo:hover{
 	}
 
 	/* technical */
+	#technical h2{
+		margin-bottom: 50px;
+	}
 	#technical h3:after, #technical h3:before{
 		content: none;
 	}
@@ -1391,10 +1408,14 @@ footer .footer-icon.weibo:hover{
 		display: none;
 	}
 	
-	/* team */
 	#team .row,
 	#team .col-sm-4{
 		display: block;
+	}
+	
+	/* company */
+	.company{
+		margin-top: 0;
 	}
 
 	
@@ -1425,7 +1446,8 @@ footer .footer-icon.weibo:hover{
 
 	/* footer */
 	footer .soc-icons .footer-icon{
-		margin: 0 10px;
+		width: 54px;
+		margin: 0;
 	}
 	
 }
