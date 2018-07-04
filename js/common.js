@@ -95,7 +95,7 @@ $(document).ready(function(){
     // });
 
 
-    jQuery.scrollSpeed(100, 800);
+    // jQuery.scrollSpeed(100, 800);
 
     var swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
