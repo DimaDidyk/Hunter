@@ -17,10 +17,7 @@ $(document).ready(function(){
 	$(window).scroll();
 
 
-	$('.map-item-wrap').click(function(){
-		$('.map-item-wrap').removeClass('active');
-		$(this).addClass('active');
-	});
+	
 
 
 
@@ -107,6 +104,12 @@ $(document).ready(function(){
       mousewheel: true,
     });
 
+
+    // $('.map-item-wrap').click(function(){
+    //     $('.map-item-wrap').removeClass('active');
+    //     $(this).addClass('active');
+    // });
+    
 
     var popupStatus = false;
     // open popup

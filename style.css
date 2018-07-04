@@ -445,8 +445,9 @@ header{
     color: #fff;
     padding-bottom: 100px;
     padding-top: 160px;
-    background-image: -webkit-linear-gradient( -190deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
-    background-image: -ms-linear-gradient( -190deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);
+    /*background-image: -webkit-linear-gradient( -190deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);*/
+    /*background-image: -ms-linear-gradient( -190deg, rgb(108,144,252) 0%, rgb(46,98,254) 0%, rgb(86,211,230) 100%);*/
+	background: rgb(57, 104, 247);
 }
 #map .map-img{
     width: 86%;
@@ -484,7 +485,7 @@ header{
 	font-size: 16px;
 	text-align: center;
 	padding: 18px 0;
-	cursor: pointer;
+	/*cursor: pointer;*/
 }
 #map .map-item-wrap span{
 	text-align: center;
