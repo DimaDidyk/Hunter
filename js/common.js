@@ -7,6 +7,14 @@ $(document).ready(function(){
         $("#main-menu").toggle(600);
     });
 
+    if( $(window).width() < 992 ){
+        $('#main-menu .menu-item').click(function(){
+            $("#sandwich").toggleClass("active");
+            $("header").toggleClass("active");
+            $("#main-menu").toggle(600);
+        });
+    }
+
     // change color header
 	$(window).scroll(function(){
 		if( $(window).scrollTop() > $(window).height() ){

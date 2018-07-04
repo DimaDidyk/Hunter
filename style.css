@@ -959,6 +959,7 @@ header{
 #about{
 	min-height:  100%;
 	padding: 100px 0 0;
+	height: 100%;
 	-webkit-box-pack: end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
