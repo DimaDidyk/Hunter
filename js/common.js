@@ -252,9 +252,11 @@ $(document).ready(function(){
     };
 })(jQuery);
 
-//Инициализация плагина
-$(window).load(function(){
-    $('.landingNav').liLanding({
-        topMargin:0
-    });
-})
+if( $(window).width() > 992 ){
+    //Инициализация плагина
+    $(window).load(function(){
+        $('.landingNav').liLanding({
+            topMargin:0
+        });
+    })
+}
