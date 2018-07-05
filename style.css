@@ -1325,11 +1325,15 @@ footer .footer-icon.weibo:hover{
 		font-size: 32px;
 	}
 	
+	#banner{
+		display: flex;
+		
+	}
 	#banner .banner-logo{
 	    max-width: 94%;
 	}
 	#banner h2{
-		margin-top: 10px;
+		margin-top: -75px;
 	}
 	#banner p{
 		/*font-size: 18px;*/
@@ -1356,8 +1360,12 @@ footer .footer-icon.weibo:hover{
 		margin: 20px 0;
 	}
 	#timer .clock{
-		display: block;
+		display: inline-block;
     	margin: 0 auto !important;
+	}
+	.pre-info{
+		max-width: 300px;
+		margin: 0 auto 50px;
 	}
 	.flip-clock-wrapper ul{
 		width: 20px;

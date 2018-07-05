@@ -7,13 +7,13 @@ $(document).ready(function(){
         $("#main-menu").toggle(600);
     });
 
-    if( $(window).width() < 992 ){
-        $('#main-menu .menu-item').click(function(){
+    $('#main-menu .menu-item').click(function(){
+        if( $(window).width() < 992 ){
             $("#sandwich").toggleClass("active");
             $("header").toggleClass("active");
             $("#main-menu").toggle(600);
-        });
-    }
+        }
+    });
 
     // change color header
 	$(window).scroll(function(){
