@@ -250,40 +250,37 @@ header{
 /* banner 
 --------------------------------------------*/
 #banner{
-	display: block;
+	display: flex;
     background-image: url('./images/home-banner-bg.jpg');
 }
 #banner .banner-logo{
-	width: -webkit-max-content;
-	width: -moz-max-content;
-	width: max-content;
-	margin: 0 auto;
-	position:  absolute;
-	display:  block;
-	left:  0;
-	right:  0;
-	max-width: 100%;
+    display: block;
+    right: 0;
     position: absolute;
-    bottom: 0;
-    max-height: 50vh;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: cover;
+    bottom: -100px;
+    left: 0;
+    max-height: 90vh;
+    margin: 0;
 }
 
 #banner h2{
-	font-size: 56px;
+	font-size: 110px;
 	color: #fff;
 	margin: 0 auto;
 	margin-top: 100px;
 	margin-bottom: 36px;
-	text-align: center;
-	padding: 0 15px;
+	text-align: right;
+	width: 100%;
+	letter-spacing: 20px;
+	text-indent: -14px;
+	direction:  rtl;
 }
 #banner p{
 	color: #fff;
-	text-align: center;
-	padding: 0 15px;
-	font-size: 22px;
+	text-align: right;
+	font-size: 24px;
+	line-height: 1.8;
 }
 
 /* hunter
@@ -343,6 +340,7 @@ header{
 #technical{
 	background: #416ff9;
 	color: #fff;
+	overflow:  hidden;
 }
 #technical h2{
 	text-align: center;
@@ -440,7 +438,8 @@ header{
 	width: -moz-max-content;
 	width: max-content;
 	margin:  0 auto;
-	bottom: -80px;
+	bottom: -140px;
+	max-width: 800px;
 }
 
 
@@ -823,6 +822,9 @@ header{
 	position: relative;
 	padding-bottom: 100px;
 }
+#media-information .content-information-box .content-text img{
+	margin: 0 auto;		
+}
 /*#media-information .shadow:before{
 	box-shadow: inset -8px -175px 146px -2px rgba(255,255,255,0.7);
 	position: absolute;
@@ -957,12 +959,13 @@ header{
 /* about
 --------------------------------------------*/
 #about{
-	min-height:  100%;
+	/* min-height: 100vh; */
 	padding: 100px 0 0;
-	height: 100%;
-	-webkit-box-pack: end;
-	    -ms-flex-pack: end;
-	        justify-content: flex-end;
+	/* height: 100vh; */
+	/* -webkit-box-pack: end; */
+	-ms-flex-pack: end;
+	/* justify-content: flex-end; */
+	background: #f2f6fd;
 }
 #about h3{
 	color: rgb(77, 77, 77);
@@ -999,12 +1002,13 @@ header{
 	border: none;
 	border: none;
 	color: #333;
-	border-bottom: 1px solid rgba(153, 153, 153, .5);
+	border-bottom: 1px solid rgba(0, 0, 0, .3);
 	-webkit-transition: all .3s;
 	-o-transition: all .3s;
 	transition: all .3s;
 	font-size: 24px;
 	padding: 10px 0;
+	background:  transparent;
 }
 #about input[type="text"]::-webkit-input-placeholder{
 	text-align: center;
@@ -1024,8 +1028,7 @@ header{
 }
 #about input[type="text"]:hover,
 #about input[type="text"]:focus{
-	border-bottom: 1px solid #333;
-
+	border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 #about input[type="text"]:focus::-webkit-input-placeholder{
 	text-align: left;
@@ -1251,14 +1254,19 @@ footer .footer-icon.weibo:hover{
 		max-width: max-content;
 	}
 
-
+	#banner{
+		display: block;
+	}
 	#banner h2{
 		margin-top: 0;
 	    margin-bottom: 20px;
-		font-size: 32px;
+		font-size: 52px;
 	}
 	#banner p{
-		font-size: 18px;
+		font-size: 20px;
+	}
+	#banner .banner-logo{
+		height: 68vh;
 	}
 
 	/* profesional */
@@ -1326,18 +1334,19 @@ footer .footer-icon.weibo:hover{
 	}
 	
 	#banner{
-		display: flex;
-		
 	}
 	#banner .banner-logo{
 	    max-width: 94%;
+	    height: 68vh;
+		object-fit: contain;
 	}
 	#banner h2{
-		margin-top: -75px;
+		margin-top: 30px;
 	}
 	#banner p{
 		/*font-size: 18px;*/
 	}
+
 	/* hunter */
 	#hunter h2{
 
